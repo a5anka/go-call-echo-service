@@ -5,9 +5,9 @@ schemaVersion: 1.0
 endpoints:
 # +required Unique name for the endpoint.
 # This name will be used when generating the managed API
- - name: echo-service
+ - name: call-echo-service
    # +optional Display name for the endpoint.
-   displayName: Echo Service
+   displayName: Call Echo Service
    # +required Service section has the user service endpoint details
    service:
      # +optional Base path of the API that gets exposed via the endpoint.
