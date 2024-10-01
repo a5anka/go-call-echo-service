@@ -28,3 +28,17 @@ endpoints:
    # This is only applicable to REST endpoint types.
    # The path should be relative to the docker context.
    schemaFilePath: openapi.yaml
+
+dependencies:
+    serviceReferences:
+    - name: choreo:///asankaabeyweera/px6f/go-echo-service/5c69c/v1/PUBLIC
+      connectionConfig: 01ef7fc1-0325-1cf8-b3f2-3b37f984120b
+      env:
+      - from: ServiceURL
+        to: SERVICE_URL
+      - from: ConsumerKey
+        to: OAUTH_CLIENT_ID
+      - from: ConsumerSecret
+        to: OAUTH_CLIENT_SECRET
+      - from: TokenURL
+        to: OAUTH_TOKEN_URL
