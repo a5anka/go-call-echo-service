@@ -1,0 +1,20 @@
+openapi: 3.0.0
+info:
+  title: Client Service
+  description: A service that calls the echo microservice with OAuth2 protection.
+  version: 1.0.0
+servers:
+  - url: http://localhost:9000 
+paths:
+  /call-echo:
+    get:
+      summary: Triggers a call to the echo microservice and returns the echoed response
+      responses:
+        '200':
+          description: Successful response with the echoed string from the echo microservice
+          content:
+            text/plain:
+              schema:
+                type: string
+        '500':
+          description: Internal Server Error - An error occurred while processing the request
